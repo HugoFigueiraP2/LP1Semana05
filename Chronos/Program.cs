@@ -17,7 +17,12 @@ namespace Chronos
             crono1.Stop();
             crono2.Stop();
 
-            Console.WriteLine("Crono 1: " + )
+            float tempoCrono1 = (float) crono1.Elapsed.TotalSeconds;
+            float tempoCrono2 = (float) crono2.Elapsed.TotalSeconds;
+
+            Console.WriteLine($"Crono 1: {tempoCrono1:f3}");
+            Console.WriteLine($"Crono 2: {tempoCrono2:f3}");
+
 
 
 
