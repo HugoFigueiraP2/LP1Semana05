@@ -10,7 +10,7 @@ namespace MyGame
 
         public Enemy(string name)
         {
-            this.name = name;
+            SetName(name);
             health = 100;
             shield = 0;
         }
@@ -34,6 +34,37 @@ namespace MyGame
                 }
             }
         }
+
+        public float GetHealth()
+        {
+            return health;
+
+        }
+
+        public float GetShield()
+        {
+            return shield;
+        }
+
+        public string SetName(string char_name)
+        {
+            char_name = char_name.Trim();
+
+            if (char_name.Length > 8)
+            {
+                name = char_name.Substring(0,8);
+            }
+            else
+            {
+                name = char_name;
+
+            }
+
+            return name;
+
+        }
+
+
 
 
         
