@@ -8,11 +8,14 @@ namespace MyGame
         private float health;
         private float shield;
 
+        private static int power_up_collected;
+
         public Enemy(string name)
         {
             SetName(name);
             health = 100;
             shield = 0;
+            power_up_collected = 0;
         }
 
         public string GetName()
@@ -104,6 +107,13 @@ namespace MyGame
                 
             }
 
+            power_up_collected += 1;
+
+        }
+
+        public static int GetPowersCollected()
+        {
+            return power_up_collected;
         }
 
 

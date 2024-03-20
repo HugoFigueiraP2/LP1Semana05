@@ -22,6 +22,7 @@ namespace MyGame
             enemies[0].PickupPowerUp(PowerUp.Shield, 30);
             enemies[1].PickupPowerUp(PowerUp.Shield, 40);
             enemies[1].PickupPowerUp(PowerUp.Shield, 30);
+            
 
 
             foreach(Enemy j in enemies)
@@ -29,6 +30,8 @@ namespace MyGame
                 Console.WriteLine($"{j.GetName()} {j.GetHealth()} {j.GetShield()}");
 
             }
+
+            Console.WriteLine(Enemy.GetPowersCollected());
         }
     }
 }
