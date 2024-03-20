@@ -18,6 +18,12 @@ namespace MyGame
 
             }
 
+            enemies[0].TakeDamage(20);
+            enemies[0].PickupPowerUp(PowerUp.Shield, 30);
+            enemies[1].PickupPowerUp(PowerUp.Shield, 40);
+            enemies[1].PickupPowerUp(PowerUp.Shield, 30);
+
+
             foreach(Enemy j in enemies)
             {
                 Console.WriteLine($"{j.GetName()} {j.GetHealth()} {j.GetShield()}");
