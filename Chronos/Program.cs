@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Chronos
 {
@@ -11,9 +12,9 @@ namespace Chronos
             Stopwatch crono2 = new Stopwatch();
 
             crono1.Start();
-            System.Threading.Thread.Sleep(600);
+            Thread.Sleep(600);
             crono2.Start();
-            System.Threading.Thread.Sleep(200);
+            Thread.Sleep(200);
             crono1.Stop();
             crono2.Stop();
 

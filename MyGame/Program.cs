@@ -27,7 +27,8 @@ namespace MyGame
 
             foreach(Enemy j in enemies)
             {
-                Console.WriteLine($"{j.GetName()} {j.GetHealth()} {j.GetShield()}");
+                Console.WriteLine
+                ($"{j.GetName()} {j.GetHealth()} {j.GetShield()}");
 
             }
 
