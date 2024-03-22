@@ -4,35 +4,26 @@ namespace MyGameFriday
 {
     public class GameLevel
     {
-        private int number_rooms;
+        private int number_rooms = 0;
         private string [] room;
         private Difficulty level;
         private int enemy_numbers;
 
         public GameLevel(int number_rooms, Difficulty level)
         { 
-            GetNumRooms();
-            GetDifficulty();
-            enemy_numbers = 0;
-            string [] room = new string[number_rooms];
+            this.level = level;
+            this.number_rooms = number_rooms;
+            room = new string[number_rooms];
         }
         
         public void SetEnemyInRoom(int ind_room, Enemy enemy)
         {
-            if(room[ind_room].Length == 1)
-            {
-                Console.WriteLine
-                ("Já tem um inimigo a ocupar esta sala!");
-            }
-            else
-            {
-                enemy_numbers ++;
-                room[ind_room] = enemy.GetName();
-            }
+            room[ind_room] = enemy.GetName();
+            enemy_numbers++;
 
         }
 
-        public Difficulty GetDifficulty()
+        public  Difficulty GetDifficulty()
         {
             return level;
 
@@ -49,13 +40,16 @@ namespace MyGameFriday
 
         }
 
-        /*public string PrintEnemies()
+        public void PrintEnemies()
         {
              // Este programa mostra o seguinte no ecrã:
             //
-            foreach(string enemy_name in room)
-            {   int indice_enemy = room[enemy_name];
-                Console.WriteLine(enemy_name);
+            for (int i = 0; i < room.Length; i++)
+            {
+                if(!string.IsNullOrEmpty(room[i]))
+                {
+                    Console.WriteLine($"Room {i}: {room[i]}");
+                }
             }
             
             // Difficulty: Easy
@@ -66,7 +60,7 @@ namespace MyGameFriday
             // Room 18: Faker
             // Room 57: Out of order
             // Room 98: Chet
-        }*/
+        }
 
         
 

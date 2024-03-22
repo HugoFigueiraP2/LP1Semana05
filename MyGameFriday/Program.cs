@@ -20,7 +20,7 @@ namespace MyGameFriday
 
             Console.WriteLine($"Number of enemies: {gl.GetNumEnemies()}");
 
-            //gl.PrintEnemies();
+            gl.PrintEnemies();
 
             // Este programa mostra o seguinte no ecrã:
             //
