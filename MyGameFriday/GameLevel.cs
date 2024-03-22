@@ -14,12 +14,12 @@ namespace MyGameFriday
             GetNumRooms(number_rooms);
             GetDifficulty(level);
             enemy_numbers = 0;
-            room[number_rooms];
+            string [] room = new string[number_rooms];
         }
         
         public void SetEnemyInRoom(int ind_room, Enemy enemy)
         {
-            if(enemy in room[ind_room])
+            if(room[ind_room].Length == 1)
             {
                 Console.WriteLine
                 ("Já tem um inimigo a ocupar esta sala!");
@@ -28,7 +28,6 @@ namespace MyGameFriday
             {
                 enemy_numbers ++;
                 room[ind_room] = enemy;
-
             }
 
         }
@@ -54,9 +53,9 @@ namespace MyGameFriday
         {
              // Este programa mostra o seguinte no ecrã:
             //
-            for(int i = 0; i < GetNumEnemies; i++)
-            {
-            Console.WriteLine($"Room {room[en]}")
+            foreach(string enemy_name in room)
+            {   int indice_enemy = room[enemy_name];
+                Console.WriteLine(enemy_name);
             }
             
             // Difficulty: Easy
