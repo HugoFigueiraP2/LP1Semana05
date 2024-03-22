@@ -11,8 +11,8 @@ namespace MyGameFriday
 
         public GameLevel(int number_rooms, Difficulty level)
         { 
-            GetNumRooms(number_rooms);
-            GetDifficulty(level);
+            GetNumRooms();
+            GetDifficulty();
             enemy_numbers = 0;
             string [] room = new string[number_rooms];
         }
@@ -27,7 +27,7 @@ namespace MyGameFriday
             else
             {
                 enemy_numbers ++;
-                room[ind_room] = enemy;
+                room[ind_room] = enemy.GetName();
             }
 
         }
@@ -49,7 +49,7 @@ namespace MyGameFriday
 
         }
 
-        public string PrintEnemies()
+        /*public string PrintEnemies()
         {
              // Este programa mostra o seguinte no ecrã:
             //
@@ -66,7 +66,7 @@ namespace MyGameFriday
             // Room 18: Faker
             // Room 57: Out of order
             // Room 98: Chet
-        }
+        }*/
 
         
 
